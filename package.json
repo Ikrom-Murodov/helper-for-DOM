@@ -1,7 +1,7 @@
 {
-  "name": "project_start",
-  "version": "1.0.0",
-  "description": "Сборка проекта на Webpack-4",
+  "name": "helper-for-dom",
+  "version": "0.1.0",
+  "description": "Library for working with DOM.",
   "main": "src/js/index.js",
   "scripts": {
     "dev": "node -r esm webpack/dev.js",
@@ -19,7 +19,7 @@
     "email": "ikrommurodov2001@gmail.com",
     "url": "https://github.com/Ikrom-Murodov"
   },
-  "homepage": "https://github.com/Ikrom-Murodov",
+  "homepage": "https://github.com/Ikrom-Murodov/helper-for-DOM",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",

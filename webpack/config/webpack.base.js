@@ -2,10 +2,10 @@ import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constans';
 import merge from 'webpack-merge';
 import { join } from 'path';
 
-// Базовые модули
+// Base moudules
 import * as modules from '../modules/base';
 
-// Базовый плагины
+// Base plugins
 import * as plugins from '../plugins/base';
 
 export default () => {

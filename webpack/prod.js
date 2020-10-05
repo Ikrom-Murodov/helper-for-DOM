@@ -1,15 +1,15 @@
 import Webpack from 'webpack';
 import chalk from 'chalk';
 
-// Конфигурационный файл для режима 'загрузки' (production)
+// Configuration files for production mode
 import getProdConfig from './config/webpack.prod';
 
-// Компилятор webpack
+// Compilation webpack
 const compiler = Webpack(getProdConfig());
 
-// Запуск сборки проекта
+// Running a project build
 compiler.run((error, stats) => {
-  // Обработка ошибоков конфигурации
+  // Handling configuration errors
   if (error) {
     console.error(error.stack || error);
 
@@ -30,7 +30,7 @@ compiler.run((error, stats) => {
     entrypoints: false,
   });
 
-  // Обработка ошибоков во время компиляции (ошибка синтаксиса)
+  // Compile-time error handling
   if (stats.hasErrors()) {
     console.log(chalk.redBright('Error'));
     console.error(info);
@@ -38,7 +38,7 @@ compiler.run((error, stats) => {
     return null;
   }
 
-  // Обработка предупреждений во время компиляции
+  // Compile-time warning handling
   if (stats.hasWarnings()) {
     console.log(chalk.yellowBright('Warning'));
     console.warn(info);

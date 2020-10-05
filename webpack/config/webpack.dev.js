@@ -1,7 +1,7 @@
 import getBaseConfig from './webpack.base';
 import merge from 'webpack-merge';
 
-// Модули для разрабоки проекта в режиме development
+// Modules for project development in development mode
 import * as modules from '../modules/dev';
 
 export default () => {
