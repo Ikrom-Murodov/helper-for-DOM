@@ -1,10 +1,10 @@
 import getBaseConfig from './webpack.base';
 import merge from 'webpack-merge';
 
-// Плагины для сборки проекта в режиме production
+// Plugins for building a project in production mode
 import * as plugins from '../plugins/prod';
 
-// Модили для сборки проекта в режиме production
+// Modules for building a project in production mode
 import * as modules from '../modules/prod';
 
 export default () => {
