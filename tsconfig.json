@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "ES2015",
     "noImplicitAny": true,
-    "removeComments": true,
+    "removeComments": false,
     "sourceMap": true,
     "outDir": "src/js",
     "target": "ES2017",
