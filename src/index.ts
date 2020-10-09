@@ -1,1 +1,1 @@
-import './ts/index';
+import { $ } from '@/index';
