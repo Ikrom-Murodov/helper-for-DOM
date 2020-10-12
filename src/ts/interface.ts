@@ -31,7 +31,7 @@ export interface IDomHelper {
   addAttr(name: string, value: string): IDomHelper;
 
   /**
-   * Get attribute from HTMLElement.
+   * Get attribute from html element.
    * @param {string} name - Attribute name.
    * @returns {string} - Returns attribute from HTML element or null
    * @public - This method is available to all instances of the DomHelper class.
@@ -40,7 +40,7 @@ export interface IDomHelper {
 
   /**
    * Overwrites the content of the HTML element.
-   * @param {string | HTMLElement}
+   * @param {string | HTMLElement} html - content for HTMl element
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -55,7 +55,7 @@ export interface IDomHelper {
 
   /**
    * Adds a string or html element to the end of the html element.
-   * @param {string | DomHelper | HTMLElement}
+   * @param {string | DomHelper | HTMLElement} node - the node to add.
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -63,8 +63,8 @@ export interface IDomHelper {
 
   /**
    * Adds an event handler to an element.
-   * @param {keyof GlobalEventHandlersEventMap} - Event name.
-   * @param {ICallBack} - handler.
+   * @param {keyof GlobalEventHandlersEventMap } eventName.
+   * @param {ICallBack} cb - handler.
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -72,8 +72,8 @@ export interface IDomHelper {
 
   /**
    * Remove event handler from element.
-   * @param {keyof GlobalEventHandlersEventMap} - Event name.
-   * @param {ICallBack} - handler.
+   * @param {keyof GlobalEventHandlersEventMap} eventName - Event name.
+   * @param {ICallBack} cb - handler.
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -81,7 +81,7 @@ export interface IDomHelper {
 
   /**
    * Add styles to HTML element
-   * @param {TDomHelperCssParams} - object keys must be names css styles
+   * @param {TDomHelperCssParams} params - object keys must be names css styles
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -91,7 +91,7 @@ export interface IDomHelper {
    * Finds the closest parent HTML element and places it in the instance
    * DomHelper class. Then it returns the given instance. if element is not
    * found it will return null
-   * @param {string} - Css selector
+   * @param {string} selector - Css selector
    * @returns {IDomHelper | null} Returns an instance of the DomHelper class or null
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -101,7 +101,7 @@ export interface IDomHelper {
    * Finds all html elements that have the given selector. And for each of them,
    * an instance of the DomHelper class is created,
    * and adds each instance to an array and then returns that array.
-   * @param {string} - Css selector
+   * @param {string} selector - Css selector
    * @returns {IDomHelper[] | null} - Returns instances of the DomHelper class as an array or null.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -111,7 +111,7 @@ export interface IDomHelper {
    * Finds the html element with the given selector.
    * And creates an instance of the DomHelper class for
    * it and then returns that instance.
-   * @param {string} - Css selector
+   * @param {string} selector - Css selector
    * @returns {IDomHelper | null} - Returns instances of the DomHelper class or null.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -119,7 +119,7 @@ export interface IDomHelper {
 
   /**
    * Add class to html element.
-   * @param {string} -> Class name for
+   * @param {string} className - Class name for html element
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -127,7 +127,7 @@ export interface IDomHelper {
 
   /**
    * Remove class from html element
-   * @param {string} -> Class name
+   * @param {string} className -  Class name for html element
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -148,8 +148,8 @@ export interface IDomHelper {
   getText(): string;
 
   /**
-   * Update text text for HTML element
-   * @param {string} -> text for html element
+   * Add text for HTML element
+   * @param {string} text - text for html element
    * @returns {IDomHelper} - Returns an instance of the DomHelper class.
    * @public - This method is available to all instances of the DomHelper class.
    */
@@ -171,7 +171,7 @@ export interface IDomHelper {
 
   /**
    * Finds styles by parameters and returns them as an object
-   * @param {Array<keyof CSSStyleDeclaration>} - array elements must be css style names.
+   * @param {Array<CSSStyleDeclaration>}styleNames - array elements must be css style names.
    * @returns {Object} -> Returns styles of elements as an object
    * @public - This method is available to all instances of the DomHelper class.
    */
