@@ -54,3 +54,5 @@ node_modules
 /build
 /public
 /dist
+.vscode
+.idea
