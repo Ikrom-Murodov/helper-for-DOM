@@ -149,7 +149,8 @@ class DomHelper implements IDomHelper {
    * @public - This method is available to all instances of the DomHelper class.
    */
   public closest(selector: string): IDomHelper | null {
-    const element: HTMLElement | null = document.querySelector(selector);
+    const element: HTMLElement | null = this.$el.closest(selector)
+
     if (!element) return null;
 
     return new DomHelper({
